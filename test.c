@@ -1,80 +1,80 @@
 //#include<stdio.h>
-//int main()
+//
+////将输入的整数按数字打印出来，使用递归的思想，该函数是从最高位依次打印，虽然最低位最好打印
+//void fun(int x)
 //{
-//	int a, b, c;
-//	scanf_s("%d%d%d", &a,&b,&c);
-//	if (a < b)
+//	if (x > 9)
 //	{
-//		a = b;
-//		t = a;
 //		
+//		fun(x/10);
 //	}
-//	if (a < c)
-//	{
-//		a = c;
-//		c = a;
-//	}
-//	if (b < c)
-//	{
-//		b = c;
-//		c = b;
-//	}
-//	printf("%d,%d,%d", a, b, c);
-//	return 0;
+//	printf("%d ", x % 10);
 //}
-//#include<stdio.h>
+//
 //int main()
 //{
-//	int i = 0;
-//	int j = 0;
+//	unsigned int sun = 0;
+//	scanf_s("%d",&sun);
+//	fun(sun);
+//
+//
+//	return 0;
+//}
+
+//自定义函数求字符串长度
+//有临时变量
+//#include<stdio.h>
+//#include<string.h>
+//int my_strlen(char* s)
+//{
 //	int count = 0;
-//	for (i = 100; i <= 200; i++)
+//	while (*s != "\0")
 //	{
-//		for (j = 2; j < i; j++)
-//		{
-//			if (i%j == 0)
-//			{
-//				//printf("%d", i);
-//				break;
-//			}
-//		}
-//		if (i == j)
-//		{
-//			count++;
-//			printf("%d ", i);
-//		}
+//		count++;
+//		s++;
 //	}
-//	printf("count=%d\n", count);
-//	return 0;
+//	return count;
 //}
+//
+//没有临时变量
 //#include<stdio.h>
+//int len(char*s)
+//{
+//	if (*s != "\0")
+//	{
+//		return 1 + len(s + 1);
+//	}
+//	else
+//	{
+//		return 0;
+//	}
+//}
 //int main()
 //{
-//	int i = 0;
-//	int arr[] = { 0,1,5,9,7,12,19,20 };
-//	int sz = (sizeof(arr)) / sizeof(arr[0]);
-//	int max = arr[0];//不能令max=0，只能是数组当中的其中一个数
-//	for (i = 0; i < sz; i++)
-//	{
-//		if (arr[i] > max)
-//			max = arr[i];
-//	}
-//
-//	printf("最大值为：%d\n", max);
+//	char arr[] = "limi";
+//	int count = 0;
+//	count=my_strlen(arr);
+//	//count = len(arr);
+//	printf("%d\n",count);
 //
 //	return 0;
 //}
+
+
+
+//二维数组
+
 #include<stdio.h>
 int main()
 {
+	int arr[3][4] = {{1,2,3},{4,5}};
 	int i = 0;
-	int j = 1;
-	for (i = 1; i <= 9; i++)
+	for (i = 0; i < 3; i++)
 	{
-		for (j = 1; j <= i; j++)
+		int j = 0;
+		for (j = 0; j < 4; j++);
 		{
-			printf("%d*%d=%-2d ", i, j, i*j);//%2d是保留两位向右对齐若是一位则空格对齐，%-2d是向左对齐
-
+			printf("%d ", arr[i][j]);
 		}
 		printf("\n");
 	}
