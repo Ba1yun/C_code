@@ -137,6 +137,7 @@ int main()
 */
 
 //猜数字游戏
+/*
 #include<iostream>
 using namespace std;
 int main()
@@ -162,11 +163,24 @@ int main()
 		{
 			cout << "恭喜猜对了" << endl;
 			break;
-		}*/
-		
+		}
 	}
 	cout << "恭喜猜对了" << endl;
 	system("spause");
 	return 0;
 
+}
+*/
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num = 0;
+	do
+	{
+		cout << num << endl;
+		num++;
+	} while (num < 10);
+	system("pause");
+	return 0;
 }
